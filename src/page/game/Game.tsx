@@ -10,7 +10,7 @@ interface game_type{
 }
 
 const Game = (props:game_type):JSX.Element => {
-    const [character_type, setCharacter_type] = useState<number>(999)
+    const [character_type, setCharacter_type] = useState<number>(1)
     // const [point, setPoint] = useState<number>(0)
     const navigate = useNavigate()
     const [time, setTime] = useState(30);
@@ -55,10 +55,6 @@ const Game = (props:game_type):JSX.Element => {
     const katakana = ():void =>{
         character_type === 1 ? correct() : incorrect()
     }
-
-    // useEffect(make_question);
-
-    // make_question()
 
     return (
     <div className="Game">
